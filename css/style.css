@@ -97,6 +97,43 @@ header{
 header .logo img{
     height: 6rem;
 }
+header .toggle-menu{
+    color: var(--main-color);
+    font-size: 22px;
+}
+@media (min-width:768px) {
+    header .toggle-menu{
+         display: none;
+    }
+}
+@media (max-width:767px) {
+    header ul{
+        display: none;
+    }
+    header .toggle-menu:hover + ul{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #d3ad7feb;
+        width: 100%;
+    }
+    header .toggle-menu:hover + ul li{
+        padding-bottom: 20px;
+    }
+    header .toggle-menu:hover + ul li a{
+        padding:2rem 7%;
+        color: var(--bg);
+        border: none;
+    }
+
+}
+header nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 header nav ul li{
     display: inline-block;
     margin: 0 1rem;
@@ -123,6 +160,7 @@ header .icon i{
 header .icon i:hover{
     color: var(--main-color);
 }
+
 /* End navbar  */
 /* start home */
 .home{
